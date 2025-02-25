@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #86dc83;
+}
+
+.todo_tittle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #265b23;
+}
+
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.2rem 0.8rem;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #cfffcd;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  background: #265b23;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 14px;
+  padding: 12px 8px 10px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Добавлен переход */
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+  transition: background-image 0.3s ease; /* Переход для фона чекбокса */
+}
+
+ul li.checked {
+  color: #bfbfbf;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  color: #265b23;
+  text-align: center;
+  cursor: pointer;
+}
+ul li span:hover{
+  opacity: 0.7;
+}
+
+ul li img {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  color: #265b23;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul li img:hover {
+  opacity: 0.7; /* Эффект при наведении (уменьшение непрозрачности) */
+}
